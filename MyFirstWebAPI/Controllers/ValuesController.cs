@@ -16,11 +16,12 @@ namespace MyFirstWebAPI.Controllers
             return "Hello World";
         }
 
-        // Get GetData/1234/Provider/Query
-        [HttpGet("{key}/{SpatialOperationSource}/Query")]
-        public string GetQuery(string key, string SpatialOperationSource)
+        // Get GetData/
+        [HttpGet("{key}")]
+        public string GetQuery(string key)
         {
-            return "Key: " + key + " , SpatialOperationSource: " + SpatialOperationSource; 
+            // statements to  process the supplied keys
+            return "Key: " + key  ; 
         }
         
     }
